@@ -1,42 +1,64 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  
   text-align: center;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.App {
+  background-color: #121212 !important; 
+  color: #e0e0e0 !important; 
+  min-height: 100vh;
+  padding: 20px;
+ 
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+  background-color: #121212 !important;
+  color: #e0e0e0 !important;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
 
+.custom-hover:hover {
+  background-color: #7b7878 !important; 
+  color: rgb(3, 3, 3);
+}
 .card {
+  background-color: #1f1f1f; 
+  color: #eee; 
+  border: none;
   padding: 2em;
 }
 
-.read-the-docs {
-  color: #888;
+.btn-dark.custom-hover {
+  background-color: #1e88e5 !important; 
+  border: none !important;
+  transition: background-color 0.3s ease;
+}
+
+.btn-dark.custom-hover:hover {
+  background-color: #1565c0 !important;
+}
+
+.btn-outline-secondary {
+  border-color: #fff;
+  color: #fff; 
+}
+
+
+.btn-outline-secondary:disabled {
+  background-color: #fff !important;
+  color: #000 !important;
+  border-color: #fff !important;
+  cursor: not-allowed;
+}
+
+
+.text-muted {
+  color: #fff !important;
+}
+
+
+.container {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
