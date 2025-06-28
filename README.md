@@ -1,69 +1,46 @@
-# React + TypeScript + Vite
+1.Which tools did you choose and why?
+I choose following tools:
+1.React (with TypeScript): It’s a powerful and flexible UI library that allows me to break down the UI into manageable components. TypeScript helps catch bugs early and improves code clarity — especially useful when working with APIs.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+2.Vite: For its incredibly fast development server and build performance. It makes setup and iterations smooth and quick — a perfect fit for time-limited projects.
 
-Currently, two official plugins are available:
+3.Tailwind CSS: A utility-first CSS framework that helps me build responsive and consistent designs without writing too much custom CSS. It makes prototyping and styling much faster.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+4.Axios: For handling API requests, as it provides a cleaner and more readable syntax than the native fetch.
 
-## Expanding the ESLint configuration
+5.Jest & React Testing Library: To write unit tests for the core logic and components — ensuring code reliability.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+2.How would you collaborate with a backend developer if the API is not ready yet?
+If abackend is not ready yet,here is how I would approach collaboration:
+Agree on a shared API contract early, using tools like Swagger (OpenAPI) or Postman Collections. This way, I know what data to expect, even if it's not live yet.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Create mock data locally or use a mock server (like the one provided here) to simulate API responses during frontend development.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+Stay in close communication — daily standups or async messages (e.g., Slack) — to track changes in the API and resolve misunderstandings quickly.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+If the backend team can provide static JSON files, I can connect those locally and swap the API endpoint later.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+3.What potential sources of error do you expect with this API design?
+some common risks i handled with this API:
+Missing or null values in the response (e.g., mainImage, title.en, or artist.name.en might be undefined).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Image loading errors — a broken or empty URL could disrupt the UI, so I added a fallback image.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Pagination handling — unclear pagination format or missing meta information can make it tricky to implement accurate navigation.
+
+Hardcoded IDs — if filter values like artist IDs aren’t available from the API, hardcoding becomes a temporary workaround and could lead to mismatches.
+
+Inconsistent data structure — if the response shape changes over time or isn't properly versioned, it could break the frontend.
+
+4.How could the UI be made more accessible?
+Semantic HTML: Using proper tags like <label>, <button>, and headings helps screen readers understand the page structure.
+
+Alt text: All images include meaningful alt descriptions or fallbacks to help visually impaired users.
+
+Responsive layout: Tailwind’s utility classes help ensure the app works well on mobile and assistive devices.
+
+Color contrast: The dark mode theme is styled with high-contrast colors to support users with low vision.
+
+ARIA roles/labels (to be added): Dynamic content like pagination or filter results could be wrapped in aria-live regions to inform screen readers of updates.
+
+Keyboard navigation: All form controls are accessible via keyboard, and buttons have clear focus states.
