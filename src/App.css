@@ -2,7 +2,7 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  
+  font-family: 'Poppins', sans-serif;
   text-align: center;
 }
 .App {
@@ -13,7 +13,7 @@
  
 }
 body {
-  font-family: 'Poppins', sans-serif;
+  
   background-color: #d4c4bc !important;
   color: #2e2e2e!important;
   margin: 0;
@@ -44,6 +44,7 @@ body {
 }
 .card-body{
   text-align: left;
+  margin-left: 2em;
 }
 .btn-dark.custom-hover {
   background-color: #5c6f74 !important; 
