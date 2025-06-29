@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,60 +6,77 @@
   text-align: center;
 }
 .App {
-  background-color: #121212 !important; 
-  color: #e0e0e0 !important; 
+  background-color: #dbcbbf !important; 
+  color: #2e2e2e !important; 
   min-height: 100vh;
   padding: 20px;
  
 }
 body {
-  background-color: #121212 !important;
-  color: #e0e0e0 !important;
+  font-family: 'Poppins', sans-serif;
+  background-color: #d4c4bc !important;
+  color: #2e2e2e!important;
+   margin: 0;
+  padding: 0;
 }
 
 
 
 .custom-hover:hover {
-  background-color: #7b7878 !important; 
-  color: rgb(3, 3, 3);
+  background-color: #b6a89e !important; 
+  color: #0a0a0a;
 }
 .card {
-  background-color: #1f1f1f; 
-  color: #eee; 
+  background-color: #f0e4da; 
+  color: #2e2e2e; 
   border: none;
   padding: 2em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
 }
 
 .btn-dark.custom-hover {
-  background-color: #1e88e5 !important; 
+  background-color: #5c6f74 !important; 
   border: none !important;
   transition: background-color 0.3s ease;
 }
 
 .btn-dark.custom-hover:hover {
-  background-color: #1565c0 !important;
+  background-color: #3f5155 !important;
 }
 
 .btn-outline-secondary {
-  border-color: #fff;
-  color: #fff; 
+  border-color: #333;
+  color: #333; 
 }
 
 
 .btn-outline-secondary:disabled {
-  background-color: #fff !important;
-  color: #000 !important;
-  border-color: #fff !important;
+  background-color: #ccc !important;
+  color: #666 !important;
+  border-color: #ccc !important;
   cursor: not-allowed;
 }
 
 
 .text-muted {
-  color: #fff !important;
+  color: #555 !important;
 }
 
 
 .container {
   padding-top: 20px;
   padding-bottom: 20px;
+}
+.search-wrapper {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.search-wrapper input,
+.search-wrapper .dropdown {
+  width: 100% !important;
+  box-sizing: border-box;
 }

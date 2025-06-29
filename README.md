@@ -28,7 +28,7 @@ npm start
 I choose following tools:
 1.React (with TypeScript): It’s a powerful and flexible UI library that allows me to break down the UI into manageable components. TypeScript helps catch bugs early and improves code clarity — especially useful when working with APIs.
 
-2.Vite: For its incredibly fast development server and build performance. It makes setup and iterations smooth and quick — a perfect fit for time-limited projects.
+2.Vite: For its very fast development server and build performance. It makes setup and iterations smooth and quick — a perfect fit for time-limited projects.
 
 3.Tailwind CSS: A utility-first CSS framework that helps build responsive and consistent designs without writing too much custom CSS. It makes prototyping and styling much faster.
 
@@ -58,7 +58,7 @@ Hardcoded IDs — if filter values like artist IDs aren’t available from the A
 
 Inconsistent data structure — if the response shape changes over time or isn't properly versioned, it could break the frontend.
 
-4.How could the UI be made more accessible?
+4. How could the UI be made more accessible?
 Semantic HTML: Using proper tags like <label>, <button>, and headings helps screen readers understand the page structure.
 
 Alt text: All images include meaningful alt descriptions or fallbacks to help visually impaired users.
