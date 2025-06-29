@@ -2,8 +2,6 @@
 
 https://github.com/Hrutuja182/TBO_Frontend_TASK.git
 
----
-
 ## Local Setup Guide
 
 Follow these steps to run the project locally:
