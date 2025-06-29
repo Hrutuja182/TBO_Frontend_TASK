@@ -6,7 +6,7 @@ type SearchFormProps = {
   onData: (data: any[],filters:string) => void;
 };
  
-export const SearchFormfunction :React.FC<SearchFormProps> =({onData})=>{
+export const SearchForm :React.FC<SearchFormProps> =({onData}: SearchFormProps)=>{
 const[selectedArtist,setselectedArtist]= useState ("01jxz1n9nqpxgf6xgnkdtt427c")
 
     const handleSearch= async()=>{
@@ -21,7 +21,7 @@ const[selectedArtist,setselectedArtist]= useState ("01jxz1n9nqpxgf6xgnkdtt427c")
 }
        try{ 
         const data=await SearchData(filters);
-        onData(data.items,selectedArtist);
+        onData(data.items || [],selectedArtist);
        }
     
     catch(error){

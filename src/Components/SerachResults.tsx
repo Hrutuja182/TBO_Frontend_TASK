@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { SearchFormfunction } from "./SearchForm";
+import  { useState } from "react";
+import { SearchForm } from "./SearchForm";
 
 const ITEMS_PER_PAGE = 4;
-
-export const Serachresults = () => {
+const fallbackImage = "https://via.placeholder.com/300x300?text=No+Image";
+export const SearchResults = () => {
   const [results, setResults] = useState<any[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const[activeArtist,setActiveArtist]= useState <string | null>(null);
@@ -27,7 +27,7 @@ export const Serachresults = () => {
     <div className="container my-4 ">
       <h1 className="mb-4">TBO Artwork Search</h1>
 
-      <SearchFormfunction onData={handleNewResults} />
+      <SearchForm onData={handleNewResults} />
       {activeArtist && (
         <p className="tex-muted">
           <strong>Active Filter- Artist ID:</strong>{activeArtist}
@@ -42,8 +42,11 @@ export const Serachresults = () => {
                   <div className="row g-0 h-100">
                     <div className="col-5">
                       <img
-                        src={item.mainImage}
-                        alt={item.mainImageAltText }
+                        src={item.mainImage }
+                        alt={item.mainImageAltText  }
+                        //onError={(e) => {
+                         // (e.target as HTMLImageElement).src = fallbackImage;
+                       // }}
                         className="img-fluid rounded-start h-100 object-fit-cover"
                       />
                     </div>
