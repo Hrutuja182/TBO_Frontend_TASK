@@ -24,8 +24,8 @@ export const SearchResults = () => {
     setActiveArtist(selectedArtist);
   };
   return (
-    <div className="container my-4 ">
-      <h1 className="mb-4">TBO Artwork Search</h1>
+    <div className="container my-4  ">
+      <h1 className="mb-4 ">TBO Artwork Search</h1>
 
       <SearchForm onData={handleNewResults} />
       {activeArtist && (
@@ -38,7 +38,7 @@ export const SearchResults = () => {
           <div className="row">
             {currentResults.map((item, index) => (
               <div className="col-md-6 mb-4" key={index}>
-                <div className="card h-100 shadow-sm">
+                <div className="card-body1 h-100 shadow-sm">
                   <div className="row g-0 h-100">
                     <div className="col-5">
                       <img

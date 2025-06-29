@@ -35,7 +35,7 @@ return (
      </label>
      <select
         id="artistSelect"
-        className="form-select mb-2"
+        className="form-select mb-2 search-wrapper"
         value= {selectedArtist}
         onChange={(e)=>setselectedArtist(e.target.value)}
         >

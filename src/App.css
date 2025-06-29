@@ -16,7 +16,7 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: #d4c4bc !important;
   color: #2e2e2e!important;
-   margin: 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -27,14 +27,24 @@ body {
   color: #0a0a0a;
 }
 .card {
-  background-color: #f0e4da; 
+  background-color: #ccc; 
   color: #2e2e2e; 
   border: none;
   padding: 2em;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
 }
-
+.card-body1{
+  background-color: #f1f0f0;
+  color: #2e2e2e; 
+  border: none;
+  padding: 2em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+.card-body{
+  text-align: left;
+}
 .btn-dark.custom-hover {
   background-color: #5c6f74 !important; 
   border: none !important;
@@ -64,15 +74,16 @@ body {
 }
 
 
-.container {
-  padding-top: 20px;
+/*container {
+  padding-top: 10px;
   padding-bottom: 20px;
-}
+}*/
 .search-wrapper {
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
   position: relative;
+  background-color: #ccc;
 }
 
 .search-wrapper input,
